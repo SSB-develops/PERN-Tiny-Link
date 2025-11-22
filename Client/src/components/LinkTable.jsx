@@ -33,14 +33,14 @@ const LinkTable = ({ refresh }) => {
     loadLinks();
   };
 
-  //   Auto refresh table every 5s to keep stats updated
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       loadLinks();
-//     }, 5000);
+  //   Auto refresh table every 6s to keep stats updated
+  useEffect(() => {
+    const interval = setInterval(() => {
+      loadLinks();
+    }, 6000);
 
-//     return () => clearInterval(interval);
-//   }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   // Search filter (code + url)
   const filteredLinks = links.filter((l) => {
